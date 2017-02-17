@@ -3,18 +3,20 @@
 var exerciseArray = [1, 3, 8, 6, 7, 4];
 
 function biggestSecElement(array){
-  var everysec = [];
+  // SELECT EVERY SECOND ELEMENTS
+  var everySecondElement = [];
   var index = 0;
   for(let i = 0; i < array.length; i++ ){
     if(i % 2 !== 0){
-      everysec[index] = array[i];
+      everySecondElement[index] = array[i];
       index += 1;
     }
   }
-  var biggest = everysec[0];
-  for( let j = 0; j < everysec.length; j++){
-    if(everysec[j] > biggest){
-      biggest = everysec[j]
+  // FIND THE BIGGEST ONE
+  var biggest = everySecondElement[0];
+  for( let i = 0; i < everySecondElement.length; i++){
+    if(everySecondElement[i] > biggest){
+      biggest = everySecondElement[i]
     }
   }
   return biggest
